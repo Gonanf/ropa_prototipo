@@ -25,6 +25,14 @@ jobs:
             profile: minimal
     - name: Install WebAssembly
       run: rustup target add wasm32-unknown-unknown
+    - name: Install npm
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    - name: Install tailwindcss
+      run: npm install -D tailwindcss
+    - name: Init tailwindcss
+      run: npx tailwindcss init
     - name: Install Trunk
       run: cargo install trunk
     - name: Build
