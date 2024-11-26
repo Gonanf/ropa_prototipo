@@ -28,6 +28,6 @@ jobs:
     - name: Install Trunk
       run: cargo install trunk
     - name: Build
-      run: trunk build --release
+      run: trunk build --public-url https://gonanf.github.io/ropa_prototipo/ --release
       
       
