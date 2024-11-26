@@ -5,4 +5,4 @@ dist = "dist"
 [[hooks]]
 stage = "build"
 command = "tailwind"
-command_arguments = ["-o","$TRUNK_BUILD_DIR./tailwind.css"]
+command_arguments = ["-o","/home/chaos/proyectos/ropa/tailwind.css"]
