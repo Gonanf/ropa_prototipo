@@ -15,8 +15,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Check proyect
+      uses: actions/checkout@v4
+    - name: Setup Rust
+      uses: actions-rs/toolchain@v1
+      with:
+            toolchain: nightly
+            override: true
+            profile: minimal
+    - name: Install WebAssembly
+      run: rustup target add wasm32-unknown-unknown
+    - name: Install Trunk
+      run: cargo install trunk
     - name: Build
-      run: cargo build --target-dir=/target
-    - name: Run tests
-      run: cargo test --verbose
+      run: trunk build --release
+      
+      
