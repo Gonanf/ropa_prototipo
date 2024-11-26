@@ -45,7 +45,7 @@ fn index() -> Html{
                     </svg>
                 </button>
             </div>
-            <div id="productos" class={"absolute left-1/3 top-fill w-1/3 rounded-3xl shadown-lg overflow-hidden ring-1 ring-gray-900/5 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50" } hidden = {*hidden}>
+            <div id="productos" class={"absolute left-1/3 top-fill w-1/3 rounded-3xl shadown-lg overflow-hidden ring-1 ring-gray-900/5 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 z-10 absolute" } style={"z-index: 1"}hidden = {*hidden}>
                     <div class={"bg-gray-20 hover:bg-gray-50 flex group items-center  h-24 max-h-24  "}>
         <img src="./img/dandadan.png" class={"h-full w-1/12 transition-all group-hover:w-2/12"}/>
                     <a class={"text-sm transition-all group-hover:text-lg"}>{"Anime"}</a>
@@ -70,9 +70,76 @@ fn index() -> Html{
         </navbar>
         </div>
 
-        <div class={"overflow-hidden flex items-center justify-center w-full max-w-full h-full max-h-full "}>
-        <img src="/img/dandadan2.jpg" class={"p-0 transition-all hover:p-5 "}/>
+        <div class={"overflow-hidden block  w-full max-w-full h-full max-h-full  "} style={"z-index: -1"}>
+        <img src="/img/dandadan2.jpg" class={"relative px-0 transition-all hover:scale-100 scale-110 w-full "}/>
         </div>
+
+        <br/>
+        <br/>
+        <hr/>
+        <div class={"flex overflow-visible"}>
+        <div class={"flex flex-col ring-1 ring-stone-600 ml-8 mt-8 mb-8 rounded-md w-full"}>
+        <div class={"flex items-center justify-center "}>
+        <div class={"group flex items-center justify-center  -mt-5 mb-5"}>
+            <img src="/img/dandadan2.jpg" class={"relative p-0 transition-all group-hover:bg-clip-padding group-hover:backdrop-filter group-hover:blur rounded-2xl w-full h-full"}/>
+            <button type="image" class={"hidden absolute rounded-3xl shadown-lg ring-1 ring-black group-hover:inline "}><svg class={"w-8 "} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
+            </div>
+            <div class={"flex flex-col justify-evenly items-center"}>
+                <img src="/img/dandadan2.jpg" class={"relative p-0 transition-all hover:p-2"} style={"width:50px; height:50px"}/>
+                <img src="/img/dandadan2.jpg" class={"relative p-0 transition-all hover:p-2"} style={"width:50px; height:50px"}/>
+                <img src="/img/dandadan2.jpg" class={"relative p-0 transition-all hover:p-2"} style={"width:50px; height:50px"}/>
+                <img src="/img/dandadan2.jpg" class={"relative p-0 transition-all hover:p-2"} style={"width:50px; height:50px"}/>
+                <img src="/img/dandadan2.jpg" class={"relative p-0 transition-all hover:p-2"} style={"width:50px; height:50px"}/>
+                <img src="/img/dandadan2.jpg" class={"relative p-0 transition-all hover:p-2"} style={"width:50px; height:50px"}/>
+            </div>
+        </div>
+        {"Colores"}
+        <div class={"flex justify-evenly w-full"}>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black bg-amber-300 w-7 h-7 "}/>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black bg-orange-700 w-7 h-7 "}/>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black bg-red-800 w-7 h-7 "}/>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black bg-stone-900 w-7 h-7 "}/>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black bg-teal-500 w-7 h-7 "}/>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black bg-purple-600 w-7 h-7 "}/>
+
+        </div>
+        {"Tamaños"}
+        <div class={"flex justify-evenly w-full"}>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black w-5 h-5 text-sm"}>{"XL"}</button>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black w-5 h-5 text-sm"}>{"L"}</button>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black w-5 h-5 text-sm"}>{"MD"}</button>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black w-5 h-5 text-sm"}>{"M"}</button>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black w-5 h-5 text-sm"}>{"S"}</button>
+        <button  class={"rounded-3xl shadown-lg ring-1 ring-black w-5 h-5 text-sm"}>{"SS"}</button>
+
+        </div>
+        </div>
+        <div class={"mt-8 ring-1 ring-stone-600 p-5 mb-8 mr-8 rounded-md"}>
+            <p class={"text-lg mt-4 mb-5"}>{"Titulo"}</p>
+            <p class={"text-md text-gray-600 mb-56"}>{"Descripcion"}</p>
+            <p class={"text-sm"}>{"Enviado en ~3 semanas"}</p>
+            <p class={"text-md text-emerald-400 "}>{"$10.000"}</p>
+            <p class={"text-sm text text-gray-400 m-2"}>{"Cantidad"}</p>
+            <input type="number" class={"ml-2"} value="1" min="1" max="10"/>
+            <button class={"text-lg bg-amber-600 ring-1 ring-amber-300 transition-all shadown-lg rounded-2xl hover:bg-emerald-400 hover:underline p-2 w-full"}>
+            {"Guardar"}
+            </button>
+            <button class={"text-lg bg-purple-600 ring-1 ring-amber-300 transition-all shadown-lg rounded-2xl hover:bg-emerald-400 hover:underline p-2 w-full"}>
+            {"Comprar"}
+            </button>
+        </div>
+        </div>
+
+        <footer class={"bg-stone-800"}>
+            <p class={"text-lg text-neutral-300"}>{"Este es un prototipo de pagina, no presenta ningun API ni esta pensada para varios tamaños de ventanas"}</p>
+            <a class={"transition-all hover:underline text-md text-neutral-300 block"} href={"www.google.com"}>{"Instagram"}</a>
+            <a class={"transition-all hover:underline text-md text-neutral-300 block"} href={"www.google.com"}>{"TikTok"}</a>
+            <a class={"transition-all hover:underline text-md text-neutral-300 block"} href={"www.google.com"}>{"Ubicacion"}</a>
+            <a class={"transition-all hover:underline text-md text-neutral-300 block"} href={"www.google.com"}>{"Legal"}</a>
+        </footer>
         </>
     }
 }
