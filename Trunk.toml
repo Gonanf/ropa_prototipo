@@ -4,5 +4,5 @@ dist = "dist"
 
 [[hooks]]
 stage = "build"
-command = "tailwindcss"
-command_arguments = ["-o","/home/runner/work/ropa_prototipo/ropa_prototipo/tailwind.css"]
+command = "npx"
+command_arguments = ["tailwindcss","-o","/home/runner/work/ropa_prototipo/ropa_prototipo/tailwind.css"]
