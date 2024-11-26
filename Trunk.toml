@@ -5,4 +5,4 @@ dist = "dist"
 [[hooks]]
 stage = "build"
 command = "tailwind"
-command_arguments = ["-o","/home/runner/work/ropa_prototipo/tailwind.css"]
+command_arguments = ["-o","$GITHUB_WORKSPACE/tailwind.css"]
